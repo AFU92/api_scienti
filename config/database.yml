@@ -8,12 +8,18 @@ default: &default
 development:
   <<: *default
   host: localhost
-  database: admin_user
+  database: api_scienti
   password: postgres
 
 test:
   <<: *default
   host: localhost
-  database: admin_user_test
+  database: api_scienti_test
   password: postgres
+
+docker_test:
+  <<: *default
+  host: db
+  database: api_scienti_docker
+  password: test1234
   

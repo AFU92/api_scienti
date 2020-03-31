@@ -1,24 +1,36 @@
-# README
+# SCIENTI API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application implements the regions filters to the researches data in Colombia 2019.
+You can find insomnia folder with all the request examples in `./documentation/Insomnia_scienti_api.json`
 
-Things you may want to cover:
+## How To Run
 
-* Ruby version
+### Docker ready to run
 
-* System dependencies
+In order to run this application you must have installed [Docker](https://www.docker.com/products/docker-desktop) and [Docker-compose](https://docs.docker.com/compose/install/)
+Then you must run the following commands:
 
-* Configuration
+```shell
+docker-compose build
+docker-compose up -d
+docker-compose run web rake db:create
+docker-compose run web rake db:migrate
+```
 
-* Database creation
+### Run in development environment
 
-* Database initialization
+In order to run this app in development environment you must install:
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [PostgreSQL](https://www.postgresql.org/download/)
 
-* How to run the test suite
+An then, you must configure the file `./config/database.yml` with the postgresql user and run the following commands:
 
-* Services (job queues, cache servers, search engines, etc.)
+```shell
+bundle install
+rake db:create
+rake db:migrate
+rails server
+```
 
-* Deployment instructions
-
-* ...
+## Author
+Andrea Fuentes
