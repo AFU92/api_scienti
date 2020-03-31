@@ -3,6 +3,9 @@
 This application implements the regions filters to the researches data in Colombia 2019.
 You can find insomnia folder with all the request examples in `./documentation/Insomnia_scienti_api.json`
 
+## Database model
+![model](documentation/db_model.png)
+
 ## How To Run
 
 ### Docker ready to run
